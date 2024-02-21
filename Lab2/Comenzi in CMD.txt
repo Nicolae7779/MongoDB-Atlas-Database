@@ -1,0 +1,123 @@
+Microsoft Windows [Version 10.0.22631.3155]
+(c) Microsoft Corporation. Toate drepturile rezervate.
+
+C:\Users\cioba>docker version
+Client:
+ Cloud integration: v1.0.35+desktop.10
+ Version:           25.0.3
+ API version:       1.44
+ Go version:        go1.21.6
+ Git commit:        4debf41
+ Built:             Tue Feb  6 21:13:02 2024
+ OS/Arch:           windows/amd64
+ Context:           default
+
+Server: Docker Desktop 4.27.2 (137060)
+ Engine:
+  Version:          25.0.3
+  API version:      1.44 (minimum version 1.24)
+  Go version:       go1.21.6
+  Git commit:       f417435
+  Built:            Tue Feb  6 21:14:25 2024
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.6.28
+  GitCommit:        ae07eda36dd25f8a1b98dfbf587313b99c0190bb
+ runc:
+  Version:          1.1.12
+  GitCommit:        v1.1.12-0-g51d5e94
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+C:\Users\cioba>docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+c1ec31eb5944: Pull complete
+Digest: sha256:d000bc569937abbe195e20322a0bde6b2922d805332fd6d8a68b19f524b7d21d
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+C:\Users\cioba> docker ps -a
+CONTAINER ID   IMAGE                             COMMAND                  CREATED              STATUS                          PORTS     NAMES
+bc27169b90ec   hello-world                       "/hello"                 About a minute ago   Exited (0) About a minute ago             zen_darwin
+ebe81cdf1ff9   docker/welcome-to-docker:latest   "/docker-entrypoint.…"   7 minutes ago        Exited (0) 6 minutes ago                  welcome-to-docker
+
+C:\Users\cioba> docker image ls
+REPOSITORY                 TAG       IMAGE ID       CREATED        SIZE
+docker/welcome-to-docker   latest    c1f619b6477e   3 months ago   18.6MB
+hello-world                latest    d2c94e258dcb   9 months ago   13.3kB
+
+C:\Users\cioba>docker ps -a     <- Note down the container ID
+The system cannot find the file specified.
+
+C:\Users\cioba><- Note down the container ID
+The system cannot find the file specified.
+
+C:\Users\cioba>docker logs <container_id>
+The syntax of the command is incorrect.
+
+C:\Users\cioba>docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+C:\Users\cioba>docker run -d --name mongo-on-docker -p 27888:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
+Unable to find image 'mongo:latest' locally
+latest: Pulling from library/mongo
+01007420e9b0: Pull complete
+bc3bec6a423e: Pull complete
+c5db81b694a8: Pull complete
+427a1a117df0: Pull complete
+dfb180c9e7b5: Pull complete
+92e6f08e133c: Pull complete
+374f042f3159: Pull complete
+73549bb43006: Pull complete
+Digest: sha256:5a54d0323fe207d15dc48773a7b9e7e519f83ad94a19c2ddac201d7aae109eb1
+Status: Downloaded newer image for mongo:latest
+7c9e31f2ba37d18f0c4a9048b63dce771275ad9e1f5a938dd36ae8737d3772db
+
+C:\Users\cioba>mongosh mongodb://mongoadmin:secret@localhost:27888/?authSource=admin
+Current Mongosh Log ID: 65d6763ff5fee1b995e8b7c8
+Connecting to:          mongodb://<credentials>@localhost:27888/?authSource=admin&directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.5
+Using MongoDB:          7.0.5
+Using Mongosh:          2.1.5
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-02-21T22:09:29.166+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-02-21T22:09:30.107+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2024-02-21T22:09:30.107+00:00: vm.max_map_count is too low
+------
+
+test> test
+ReferenceError: test is not defined
+test> db.p
+test.p
+test> db.products
+test.products
+test> test2
+ReferenceError: test2 is not defined
+test>
