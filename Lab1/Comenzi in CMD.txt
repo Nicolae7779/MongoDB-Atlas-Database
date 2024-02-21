@@ -1,0 +1,250 @@
+Microsoft Windows [Version 10.0.22631.3155]
+(c) Microsoft Corporation. Toate drepturile rezervate.
+
+C:\Users\cioba>mongosh "mongodb+srv://cluster0.dusbo.mongodb.net/abdtest" --username abdroot
+Enter password: *******
+Current Mongosh Log ID: 65d58d5b4f1ec70f212e442e
+Connecting to:          mongodb+srv://<credentials>@cluster0.dusbo.mongodb.net/abdtest?appName=mongosh+2.1.5
+Using MongoDB:          6.0.13
+Using Mongosh:          2.1.5
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db
+abdtest
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> use abdtest
+already on db abdtest
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> show collections
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertOne({item:
+... "canvas", qty: 100, tags: [
+... "cotton"], size: { h: 28, w: 35.5, uom: "cm"}}
+... )
+{
+  acknowledged: true,
+  insertedId: ObjectId('65d58e474f1ec70f212e442f')
+}
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find();
+[
+  {
+    _id: ObjectId('65d58e474f1ec70f212e442f'),
+    item: 'canvas',
+    qty: 100,
+    tags: [ 'cotton' ],
+    size: { h: 28, w: 35.5, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find({});
+[
+  {
+    _id: ObjectId('65d58e474f1ec70f212e442f'),
+    item: 'canvas',
+    qty: 100,
+    tags: [ 'cotton' ],
+    size: { h: 28, w: 35.5, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find().pretty();
+[
+  {
+    _id: ObjectId('65d58e474f1ec70f212e442f'),
+    item: 'canvas',
+    qty: 100,
+    tags: [ 'cotton' ],
+    size: { h: 28, w: 35.5, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([
+size: { h: 19, w: 22.85, uom: "cm" } }
+...    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+...    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uomuom: "cm" } },
+...    { item: "mousepad", qty: 55, tags: ["gel", "blue"], ])
+Uncaught:
+SyntaxError: Unexpected token (4:55)
+
+  2 |    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+  3 |    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+> 4 |    { item: "mousepad", qty: 55, tags: ["gel", "blue"], ])
+    |                                                        ^
+  5 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([
+size: { h: 19, w: 22.85, uom: "cm" } }
+...    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+...    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uomuom: "cm" } },
+...    { item: "mousepad", qty: 55, tags: ["gel", "blue"], ])
+Uncaught:
+SyntaxError: Unexpected token (4:55)
+
+  2 |    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+  3 |    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+> 4 |    { item: "mousepad", qty: 55, tags: ["gel", "blue"], ])
+    |                                                        ^
+  5 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find();
+[
+  {
+    _id: ObjectId('65d58e474f1ec70f212e442f'),
+    item: 'canvas',
+    qty: 100,
+    tags: [ 'cotton' ],
+    size: { h: 28, w: 35.5, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest>  db.products.insertMany([
+ size: { h: 19, w: 22.85, uom: "cm" } }
+...    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+...    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uomuom: "cm" } },
+...
+...
+...
+... )
+Uncaught:
+SyntaxError: Unexpected token (7:0)
+
+  5 |
+  6 |
+> 7 | )
+    | ^
+  8 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+om: "cm" } }
+...    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+...    { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, u])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (3:81)
+
+  1 | db.products.insertMany([   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+  2 |    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+> 3 |    { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, u])
+    |                                                                                  ^
+  4 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([
+...    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+...    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+...    { item: "mousepad", qty: 55, tags: ["gel", "blue"],
+...  size: { h: 19, w: 22.85, uom: "cm"}}
+... )
+Uncaught:
+SyntaxError: Unexpected token, expected "," (6:0)
+
+  4 |    { item: "mousepad", qty: 55, tags: ["gel", "blue"],
+  5 |  size: { h: 19, w: 22.85, uom: "cm"}}
+> 6 | )
+    | ^
+  7 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } }, { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } }, { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, u]
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:275)
+
+> 1 | db.products.insertMany([   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } }, { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } }, { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, u]
+    |
+
+                           ^
+  2 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([ { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } }, { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } }, { item: "mousepad", qty: 55, tags: ["gel", "blue"], ])
+Uncaught:
+SyntaxError: Unexpected token (1:247)
+
+> 1 | db.products.insertMany([ { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } }, { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } }, { item: "mousepad", qty: 55, tags: ["gel", "blue"], ])
+    |
+                                                                                                                              ^  2 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([
+...    { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+...    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+...    { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+... }
+Uncaught:
+SyntaxError: Unexpected token, expected "," (5:0)
+
+  3 |    { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+  4 |    { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+> 5 | }
+    | ^
+  6 |
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest>
+
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.insertMany([ { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } }, { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } }, { item: "mousepad", qty: 55, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } } ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('65d58ff14f1ec70f212e4430'),
+    '1': ObjectId('65d58ff14f1ec70f212e4431'),
+    '2': ObjectId('65d58ff14f1ec70f212e4432')
+  }
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find({item:
+... "mousepad" })
+[
+  {
+    _id: ObjectId('65d58ff14f1ec70f212e4432'),
+    item: 'mousepad',
+    qty: 55,
+    tags: [ 'gel', 'blue' ],
+    size: { h: 19, w: 22.85, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find( {qty:{$lt:30
+}})
+[
+  {
+    _id: ObjectId('65d58ff14f1ec70f212e4430'),
+    item: 'journal',
+    qty: 25,
+    tags: [ 'blank', 'red' ],
+    size: { h: 14, w: 21, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find( {qty:{$lt:60}})
+[
+  {
+    _id: ObjectId('65d58ff14f1ec70f212e4430'),
+    item: 'journal',
+    qty: 25,
+    tags: [ 'blank', 'red' ],
+    size: { h: 14, w: 21, uom: 'cm' }
+  },
+  {
+    _id: ObjectId('65d58ff14f1ec70f212e4432'),
+    item: 'mousepad',
+    qty: 55,
+    tags: [ 'gel', 'blue' ],
+    size: { h: 19, w: 22.85, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.find( {qty: 55})
+[
+  {
+    _id: ObjectId('65d58ff14f1ec70f212e4432'),
+    item: 'mousepad',
+    qty: 55,
+    tags: [ 'gel', 'blue' ],
+    size: { h: 19, w: 22.85, uom: 'cm' }
+  }
+]
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.countDocuments()
+4
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.updateOne({item: "mousepad"}, {$set: {qty:5},$currentDate: {lastModified: true}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.deleteOne({item:"m
+ousepad"})
+{ acknowledged: true, deletedCount: 1 }
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.countDocuments()
+3
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.drop()
+true
+Atlas atlas-rw6l72-shard-0 [primary] abdtest> db.products.countDocuments()
+0
+Atlas atlas-rw6l72-shard-0 [primary] abdtest>
