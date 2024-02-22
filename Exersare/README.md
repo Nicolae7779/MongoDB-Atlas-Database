@@ -39,7 +39,7 @@
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Exersare/imagini/search_documents_in_Collection.png)
 
 ## Colecția Subjects în Docker
-![imagine](!https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Exersare/imagini/2_documents_in_Collection.png)
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Exersare/imagini/2_documents_in_Collection.png)
 
 ## Eroare din cauza că lipsesc {} în interiorul parantezelor rotunde ().
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Exersare/imagini/deleteOne_error.png)
