@@ -33,17 +33,17 @@
 
 ## b) Get the average city population by state.
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/How%20many%20cities%20are%20in%20a%20specific%20state.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/Total%20population%20in%20a%20specific%20state.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/all%20the%20cities%20in%20a%20specific%20State.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/total%20population%20by%20states.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/all%20the%20population%20and%20all%20the%20cities%20in%20the%20states.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/Average%20State%20population.png)
 
 ## c) Get the largest and the smallest city in each state.
 
