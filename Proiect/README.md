@@ -85,21 +85,21 @@
 ## e) Get the nearest 10 zips from one of Chicago's landmarks, the Willis Tower situated at coordinates 41.878876, -87.635918.
 
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/a%20Document%20that%20has%20lat%20and%20lng.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/Change%20all%20documents%20containing%20lat%20and%20lng%20in%20coordinates%20of%20type%20array.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/coordinates.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/coordinates%20of%20type%20array.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/geoWithin.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/geoWithin%20%20%20%202.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry%2C%20maxDistance.png)
 
-![imagine]()
+![imagine]([https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry.png](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry.png))
 
 ![imagine]()
 
