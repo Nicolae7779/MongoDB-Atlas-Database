@@ -31,9 +31,58 @@
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million%20%20%20%203.png)
 
 
+## b) Get the average city population by state.
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+## c) Get the largest and the smallest city in each state.
 
 
+![imagine]()
 
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+## d) Get the largest and the smallest counties in each state.
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+![imagine]()
+
+## e) Get the nearest 10 zips from one of Chicago's landmarks, the Willis Tower situated at coordinates 41.878876, -87.635918.
 
 
 ![imagine]()
@@ -56,6 +105,13 @@
 
 ![imagine]()
 
+## f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
+
+
+![imagine]()
+
+![imagine]()
+
 ![imagine]()
 
 
@@ -69,41 +125,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
-![imagine]()
 
 
