@@ -1,0 +1,119 @@
+a) Get the states with a total population of over 10 million.
+
+  Method 1
+
+db.People.aggregate([{$group: {_id: {state_name: "$state_name"}, state_population: {$sum: "$population"}}}, {$match: {state_population: {$gt: 10000000}}}, {$sort: {state_population: -1}}])
+
+
+  Method 2
+
+db.People.aggregate([{$group: {_id: {state_name: "$state_name"}, state_population: {$sum: "$population"}}}, {$sort:  { state_population: -1 }}]).toArray().slice(0, 10);
+sau
+db.People.aggregate([{$group: {_id: {state_name: "$state_name"}, state_population: {$sum: "$population"}}}, {$sort:  { state_population: -1 }}, {$limit: 10}])
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+b) Get the average city population by state.
+
+
+db.People.find({ state_name: "Delaware" }, { "city": 1, "_id": 0, population: 1})
+
+db.People.find({ state_name: "Delaware" }, { "city": 1, "_id": 0, population: 1}).count()
+
+db.People.aggregate([{ $match: { state_name: "Delaware" } }, { $group: { _id: 1, total_population: { $sum: "$population" } } }])
+
+db.People.aggregate([ { $group: { _id: {state_name:"$state_name"}, total_population: { $sum: "$population" }}}, {$sort: {total_population: -1}}] )
+
+db.People.aggregate([ { $group: { _id: {state_name: "$state_name"}, total_population: { $sum: "$population" }, total_cities: { $sum: 1 } } }, { $sort: { total_population: -1 } }] )
+
+db.People.aggregate([ { $group: { _id: {state_name: "$state_name"}, total_population: { $sum: "$population" }, All_cities: { $sum: 1 } } }, { $addFields: { Average_city_population_by_state: { $divide: ["$total_population", "$All_cities"] } } },  { $sort: { All_cities: -1 } }, ] )
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+c) Get the largest and the smallest city in each state.
+
+ db.People.find({ state_name: "American Samoa" }, { "city": 1, "_id": 0, population: 1})
+
+db.People.aggregate([ { $group: { _id: { state_name: "$state_name", city: "$city" }, population: { $sum: "$population" } } }, { "$sort": { population: 1 } }, { $group: { _id: {state_name: "$_id.state_name"}, cities: { $push: { city: "$_id.city", population: "$population" } } } }])
+
+db.People.aggregate([{$match: { "population": { $lt: 1 } } }, { $group: { _id: {state_name: "$state_name"}, cities: { $addToSet: { city: "$city", population: "$population" } } } }, {$sort: {"_id": 1 } }, { $project: { _id: 1, state_name: 1,  cities: 1} }] )
+
+
+
+db.People.aggregate([ { $group: { _id: { state_name: "$state_name", city: "$city" }, population: { $sum: "$population" } } }, { $sort: { population: 1 } }, { $group: { _id: {state_name: "$_id.state_name"}, cities: { $push: { city: "$_id.city", population: "$population" } }} }, {$project: {_id: 1, smallest_city: { $arrayElemAt: ["$cities", 0] }, largest__city: { $arrayElemAt: ["$cities", -1] } }}])
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+d) Get the largest and the smallest counties in each state.
+
+
+db.People.find({state_name: "Wyoming", county_name: "Laramie" }, { "city": 1, "_id": 0, population: 1}) // 12 Documents  
+db.People.find({state_name: "Wyoming", county_name: "Larimer" }, { "city": 1, "_id": 0, population: 1}) // 1  Document
+
+
+db.People.find({ state_name: "Wyoming" }, { county_name: 1, "_id": 0, population: 1}).sort({population: -1})
+
+
+db.People.aggregate([{ $match: {state_name: "Wyoming"} }, {$group: {_id: "$county_name", population: {$sum: "$population"} } }, {$project:{_id:0, county_name:"$_id", population: 1}}, {$sort: {population: -1 }}])
+
+
+db.People.aggregate([ { $group: { _id: { state_name: "$state_name", county_name: "$county_name" }, population: { $sum: "$population" } } }, { $group: { _id: "$_id.state_name", counties: { $push: { county_name: "$_id.county_name", population: "$population" } }} }, {$sort:{population: -1}}] )
+
+
+db.People.aggregate([{ $group: { _id: { state_name: "$state_name", county_name: "$county_name" }, population: { $sum: "$population" } } }, { $sort: { population: 1 } }, { $group: { _id: {state_name: "$_id.state_name"}, counties: { $push: { county_name: "$_id.county_name", population: "$population" } }} }, {$project: {_id: 1, smallest_county: { $arrayElemAt: ["$counties", 0] }, largest__county: { $arrayElemAt: ["$counties", -1] } }}])
+
+
+
+______________________________________________________________________________________________________________________________________________________________________________
+
+e) Get the nearest 10 zips from one of Chicago's landmarks, the Willis Tower situated at coordinates 41.878876, -87.635918.
+
+db.Coordinates.updateMany({}, [ { $set: { location: { type: "Point", coordinates: ["$lng", "$lat" ] } } }, {$unset: "lat"}, {$unset:"lng"} ])
+
+  Method 1
+
+db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [[-87.635918, 41.878876], 2.5 / 6378.1] } } }).count()
+db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [[-87.635918, 41.878876], 2.5 / 6378.1] } } });
+
+
+  Method 2
+
+db.Coordinates.find({ location: { $near: { $geometry: { type: "Point", coordinates: [-87.635918, 41.878876] }, $maxDistance: 2500 }} }).count()
+db.Coordinates.find({ location: { $near: { $geometry: { type: "Point", coordinates: [-87.635918, 41.878876] }, $maxDistance: 2500 }} })
+
+
+  Method 3
+
+db.Coordinates.find({ location: { $near: { $geometry: { type: "Point", coordinates: [-87.635918, 41.878876] } } } }).limit(10)
+
+
+  Method 4
+
+db.Coordinates.find({ location: { $near: { $geometry: { type: "Point", coordinates: [-87.635918, 41.878876] }, $maxDistance: 100000 }} }).limit(10)
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
+
+db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [ [-74.044502, 40.689247], 200 / 6378.1] } } }).count() - 
+db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [ [-74.044502, 40.689247], 50 / 6378.1] } } }).count()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
