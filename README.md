@@ -19,3 +19,10 @@
 
  f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
 
+
+
+## a) Get the states with a total population of over 10 million.
+
+
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a)/Captur%C4%83%20de%20ecran%202024-03-15%20075823.png)
+
