@@ -48,19 +48,19 @@
 ## c) Get the largest and the smallest city in each state.
 
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/all%20the%20cities%20in%20a%20specific%20state.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/all%20the%20cities%20with%200%20population%20in%20every%20state.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population%20%20%20%202.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population%20%20%20%20%203.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/The%20smallest%20and%20largest%20cities%20by%20population%20in%20every%20state.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/The%20smallest%20and%20largest%20cities%20by%20population%20in%20every%20state%20%20%20%202.png)
 
 ## d) Get the largest and the smallest counties in each state.
 
