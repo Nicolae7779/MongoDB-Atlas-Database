@@ -101,9 +101,9 @@
 
 ![imagine]([https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry.png](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry.png))
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry%2C%20maxDistance%2C%20limit.png)
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry%20%20%20%202.png)
 
 ## f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
 
