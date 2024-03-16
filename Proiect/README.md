@@ -83,16 +83,26 @@ afișează populația medie a orașelor din fiecare stat
 
 ## c) Get the largest and the smallest city in each state.
 
+Afișează toate orașele din statul "American Samoa"
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/all%20the%20cities%20in%20a%20specific%20state.png)
 
+
+Afișează toate orașele din fiecare stat care au populația 0
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/all%20the%20cities%20with%200%20population%20in%20every%20state.png)
+
+
+Afișează toate orașele din fiecare stat în ordine ascendentă după populație
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population.png)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population%20%20%20%202.png)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population%20%20%20%20%203.png)
+
+
+Se sorteză în ordine descrescătoare a populației
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/The%20smallest%20and%20largest%20cities%20by%20population%20in%20every%20state.png)
 
