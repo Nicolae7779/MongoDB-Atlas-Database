@@ -43,7 +43,7 @@ $limit: 10 - limitează ca numărul de documente returnate să fie 10
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million%20%20%202.png)
 
 
-### toArray().slice(0, 10) sau toArray().slice(10) - toArray() convertește rezultatul într-un array de documente, slice(10) sau slice(0, 10) returnează primele 10 elemente din array
+toArray().slice(0, 10) sau toArray().slice(10) - toArray() convertește rezultatul într-un array de documente, slice(10) sau slice(0, 10) returnează primele 10 elemente din array
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million%20%20%20%203.png)
 
 
