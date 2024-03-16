@@ -44,20 +44,40 @@ $limit: 10 - limitează ca numărul de documente returnate să fie 10
 
 
 toArray().slice(0, 10) sau toArray().slice(10) - toArray() convertește rezultatul într-un array de documente, slice(10) sau slice(0, 10) returnează primele 10 elemente din array
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million%20%20%20%203.png)
 
 
 ## b) Get the average city population by state.
 
+afișeză numărul total de documente care conțin numele statului "Delaware"
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/How%20many%20cities%20are%20in%20a%20specific%20state.png)
+
+
+Fiind 68 de documente care conțin numele de "Delaware", se adună populația din fiecare document 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/Total%20population%20in%20a%20specific%20state.png)
 
+
+afișează toate orașele și populația din statul "Delaware"
+
+city: 1, _id: 0, population: 1 - toate documentele afișate vor conține doar city și population
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/all%20the%20cities%20in%20a%20specific%20State.png)
+
+
+afișează populația totală din toate statele
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/total%20population%20by%20states.png)
 
+
+afișează populația totală și numărul total de orașe din fiecare stat
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/all%20the%20population%20and%20all%20the%20cities%20in%20the%20states.png)
+
+
+afișează populația medie a orașelor din fiecare stat
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/Average%20State%20population.png)
 
