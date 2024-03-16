@@ -23,16 +23,16 @@
 
 ## a) Get the states with a total population of over 10 million.
 
-### db.People.aggregate() - pentru operații de agregare($group, $match, $sort) într-un singur pipeline
-### $group - am grupat documentele astfel încât să-mi afișeze doar state_name și state_population
-### $sum - se calculează suma populației "$populaion" din toate documentele care au același "$state_name"
-### $match - filtrează documentele pe baza unui criteriu
-### $gt - mai mare decât
-### $sort - sorteză ca documentele să fie în ordine ascendentă (1) sau descendentă (-1)
+#### db.People.aggregate() - pentru operații de agregare($group, $match, $sort) într-un singur pipeline
+#### $group - am grupat documentele astfel încât să-mi afișeze doar state_name și state_population
+#### $sum - se calculează suma populației "$populaion" din toate documentele care au același "$state_name"
+#### $match - filtrează documentele pe baza unui criteriu
+#### $gt - mai mare decât
+#### $sort - sorteză ca documentele să fie în ordine ascendentă (1) sau descendentă (-1)
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million.png)
 
 
-### $limit: 10 - limitează ca numărul de documente returnate să fie 10
+#### $limit: 10 - limitează ca numărul de documente returnate să fie 10
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million%20%20%202.png)
 
 
