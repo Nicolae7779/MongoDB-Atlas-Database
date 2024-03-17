@@ -79,6 +79,8 @@ afișează populația totală și numărul total de orașe din fiecare stat
 
 afișează populația medie a orașelor din fiecare stat
 
+$addFields - adaugă noi câmpuri la documentele rezultate în urma etapei de agregare
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/b/Average%20State%20population.png)
 
 ## c) Get the largest and the smallest city in each state.
@@ -90,10 +92,16 @@ Afișează toate orașele din statul "American Samoa"
 
 Afișează toate orașele din fiecare stat care au populația 0
 
+$addToSet - este folosit pentru a adăuga valori la un set de câmpuri într0un document existent
+
+$project -  permite ca doar unele câmpuri să fie inlcuse sau excluse din documentele rezultate
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/all%20the%20cities%20with%200%20population%20in%20every%20state.png)
 
 
 Afișează toate orașele din fiecare stat în ordine crescătoare după populație
+
+$push - pentru a adăuga o valoare la un array existent într-un document
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population.png)
 
@@ -102,7 +110,7 @@ Afișează toate orașele din fiecare stat în ordine crescătoare după popula�
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population%20%20%20%20%203.png)
 
 
-Se sorteză în ordine descrescătoare a populației
+Afișează cel mai mic și larg oraș din fiecare stat
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/The%20smallest%20and%20largest%20cities%20by%20population%20in%20every%20state.png)
 
@@ -121,17 +129,14 @@ Afișează toate orașele și populația lor din comitatul Larimer care, la rân
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/all%20cities%20in%20a%20specific%20county%20%20%20%202.png)
 
 
-Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming
+Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming (comitatele pot avea mai multe orașe, astfel încât documentele returnate afișează doar numele comitatului)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20population%20of%20counties%20in%20descending%20order%20in%20the%20state%20of%20Wyoming.png)
 
 
-Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming 
+Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20counties%20in%20descending%20order%20in%20the%20state%20of%20Wyoming.png)
-
-
-Afișează toate comitatele și populația lor în ordine crescătoare din statul Wyoming 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20counties%20in%20ascending%20order%20in%20the%20state%20of%20Wyoming.png)
 
@@ -157,7 +162,7 @@ Document de tip json
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/a%20Document%20that%20has%20lat%20and%20lng.png)
 
 
-Din toate documentele lat si lng au fost înlocuite cu un array de coordonate 
+Toate documentele ce conțin lat si lng au fost înlocuite cu un array de coordonate 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/Change%20all%20documents%20containing%20lat%20and%20lng%20in%20coordinates%20of%20type%20array.png)
 
@@ -170,7 +175,7 @@ location - numele câmpului unde sunt stocate coordonatele geografice al documen
 
 $geoWithin - este folosit pentru a verifica dacă un punct se află într-o anumită zonă
 
-$centerSphere - este folosit pentru a defini un cerc într-un sistem de coordonate sferic
+$centerSphere - este folosit pentru a efectua căutarea geospațială în jurul unui cerc după anumite coordonate [-87.635918, 41.878876]
 
 [[-87.635918, 41.878876], 2.5 / 6378.1] - acest array reprezintă centrul cercului și raza acestuia
 
@@ -203,12 +208,9 @@ maxDistance fiind 10000, limit(10), afișează doar primele 10 documente
 
 ## f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
 
-$geoWithin - este folosit pentru a verificadacă o formă geomretrică (de exemplu: cerc) se află în interiorulunei altei forma geospațiale
+$geoWithin - este folosit pentru a verificadacă o formă geomretrică (de exemplu: cerc) se află în interiorul unei altei forme geospațiale
 
-$geoSphere - este folosit pentru a efectua căutarea geospațială în jurul unui cerc după anumite coordonate [-74.044502, 40.489247]
-
-200 / 6378.1 - sunt afișate toate documentele pe o rază de 200km, coordonatele [-74.044502, 40.489247] fiind centrul cercului
-
+200 / 6378.1 - sunt afișate toate documentele pe o rază de 200 km, coordonatele [-74.044502, 40.489247] fiind centrul cercului
 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere.png)
