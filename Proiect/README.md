@@ -152,9 +152,12 @@ Afișează cel mai mic și larg comitat din fiecare stat
 
 ## e) Get the nearest 10 zips from one of Chicago's landmarks, the Willis Tower situated at coordinates 41.878876, -87.635918.
 
-
+Document de tip json
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/a%20Document%20that%20has%20lat%20and%20lng.png)
+
+
+Din toate documentele lat si lng au fost înlocuite cu un array de coordonate 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/Change%20all%20documents%20containing%20lat%20and%20lng%20in%20coordinates%20of%20type%20array.png)
 
@@ -162,13 +165,36 @@ Afișează cel mai mic și larg comitat din fiecare stat
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/coordinates%20of%20type%20array.png)
 
+
+location - numele câmpului unde sunt stocate coordonatele geografice al documentelor
+
+$geoWithin - este folosit pentru a verifica dacă un punct se află într-o anumită zonă
+
+$centerSphere - este folosit pentru a defini un cerc într-un sistem de coordonate sferic
+
+[[-87.635918, 41.878876], 2.5 / 6378.1] - acest array reprezintă centrul cercului și raza acestuia
+
+Coordonatele [-87.635918, 41.878876] - reprezintă longitudinea și latitudinea centrului cercului
+
+2.5 / 6378.1 - reprezintă raza cercului în kilometri, exprimată în raport cu raza Pământului
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/geoWithin.png)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/geoWithin%20%20%20%202.png)
 
+
+$near - este folosit pentru a găsi documentele care sunt în apropierea unui anumite locații greografice
+
+$geometry - este folosit pentru a specifica o formă geometrică (de exemplu: un punct)
+
+$maxDistance - specifică distanța maximă în radiani, metri, kilometri, sau mile
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry%2C%20maxDistance.png)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry.png)
+
+
+maxDistance fiind 10000, limit(10), afișează doar primele 10 documente
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry%2C%20maxDistance%2C%20limit.png)
 
