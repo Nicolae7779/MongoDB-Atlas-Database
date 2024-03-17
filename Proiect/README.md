@@ -33,7 +33,7 @@ $match - filtrează documentele pe baza unui criteriu
 
 $gt - mai mare decât
 
-$sort - sorteză ca documentele să fie în ordine ascendentă (1) sau descendentă (-1)
+$sort - sorteză ca documentele să fie în ordine crescătoare (1) sau descrescătoare (-1)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/a/population%20over%2010%20million.png)
 
@@ -93,7 +93,7 @@ Afișează toate orașele din fiecare stat care au populația 0
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/all%20the%20cities%20with%200%20population%20in%20every%20state.png)
 
 
-Afișează toate orașele din fiecare stat în ordine ascendentă după populație
+Afișează toate orașele din fiecare stat în ordine crescătoare după populație
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/c/All%20the%20cities%20in%20each%20state%20in%20ascending%20order%20by%20population.png)
 
@@ -110,25 +110,48 @@ Se sorteză în ordine descrescătoare a populației
 
 ## d) Get the largest and the smallest counties in each state.
 
+
+Afișează toate orașele și populația lor din comitatul Laramie care, la rândul său, se află în statul Wyoming
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/all%20cities%20in%20a%20specific%20county.png)
+
+
+Afișează toate orașele și populația lor din comitatul Larimer care, la rândul său, se află în statul Wyoming
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/all%20cities%20in%20a%20specific%20county%20%20%20%202.png)
 
+
+Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20population%20of%20counties%20in%20descending%20order%20in%20the%20state%20of%20Wyoming.png)
+
+
+Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20counties%20in%20descending%20order%20in%20the%20state%20of%20Wyoming.png)
 
+
+Afișează toate comitatele și populația lor în ordine crescătoare din statul Wyoming 
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20counties%20in%20ascending%20order%20in%20the%20state%20of%20Wyoming.png)
+
+
+Afișează toate comitatele și populația lor din toate statele
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20the%20counties%20in%20each%20state.png)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20the%20counties%20in%20each%20state%20%20%20%202.png)
 
+
+Afișează cel mai mic și larg comitat din fiecare stat
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/The%20smallest%20and%20biggest%20county%20in%20each%20state.png)
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/The%20smallest%20and%20biggest%20county%20in%20each%20state%20%202.png)
 
+
 ## e) Get the nearest 10 zips from one of Chicago's landmarks, the Willis Tower situated at coordinates 41.878876, -87.635918.
+
 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/a%20Document%20that%20has%20lat%20and%20lng.png)
