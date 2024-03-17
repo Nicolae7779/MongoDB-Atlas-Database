@@ -129,14 +129,14 @@ Afișează toate orașele și populația lor din comitatul Larimer care, la rân
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/all%20cities%20in%20a%20specific%20county%20%20%20%202.png)
 
 
-Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming (comitatele pot avea mai multe orașe, astfel încât documentele returnate afișează doar numele comitatului)
+Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20population%20of%20counties%20in%20descending%20order%20in%20the%20state%20of%20Wyoming.png)
 
-
-Afișează toate comitatele și populația lor în ordine descrescătoare din statul Wyoming
-
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20counties%20in%20descending%20order%20in%20the%20state%20of%20Wyoming.png)
+
+
+Afișează toate comitatele și populația lor în ordine crescătoare din statul Wyoming
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/d/the%20entire%20population%20of%20counties%20in%20ascending%20order%20in%20the%20state%20of%20Wyoming.png)
 
