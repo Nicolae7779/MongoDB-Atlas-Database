@@ -200,12 +200,26 @@ maxDistance fiind 10000, limit(10), afișează doar primele 10 documente
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/near%2C%20geometry%20%20%20%202.png)
 
+
 ## f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
+
+$geoWithin - este folosit pentru a verificadacă o formă geomretrică (de exemplu: cerc) se află în interiorulunei altei forma geospațiale
+
+$geoSphere - este folosit pentru a efectua căutarea geospațială în jurul unui cerc după anumite coordonate [-74.044502, 40.489247]
+
+200 / 6378.1 - sunt afișate toate documentele pe o rază de 200km, coordonatele [-74.044502, 40.489247] fiind centrul cercului
+
 
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere.png)
 
+
+50 / 6378.1 - sunt afișate toate documentele pe o rază de 50km
+
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere%20%202.png)
+
+
+Populația totală care se află de la 50km la 200km față de coordonatele [-74.044502, 40.489247]
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere%20%203.png)
 
