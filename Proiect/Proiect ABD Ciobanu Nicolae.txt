@@ -1,3 +1,6 @@
+github
+https://github.com/Nicolae7779/MongoDB-Atlas-Database/tree/main/Proiect
+
 a) Get the states with a total population of over 10 million.
 
   Method 1
@@ -105,8 +108,12 @@ db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [ [-74.044502, 40
 db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [ [-74.044502, 40.689247], 50 / 6378.1] } } }).count()
 
 
+db.Coordinates.aggregate([ { $match: { location: { $geoWithin: { $centerSphere: [[-74.044502, 40.689247], 200 / 6378.1] } } } }, { $group: { _id: 0, Population: { $sum: "$population" } } }] ).toArray()[0].Population
+
+db.Coordinates.aggregate([ { $match: { location: { $geoWithin: { $centerSphere: [[-74.044502, 40.689247], 50 / 6378.1] } } } }, { $group: { _id: 0, Population: { $sum: "$population" } } }] ).toArray()[0].Population
 
 
+db.Coordinates.aggregate([ { $match: { location: { $geoWithin: { $centerSphere: [[-74.044502, 40.689247], 200 / 6378.1] } } } }, { $group: { _id: 0, Population: { $sum: "$population" } } }] ).toArray()[0].Population - db.Coordinates.aggregate([ { $match: { location: { $geoWithin: { $centerSphere: [[-74.044502, 40.689247], 50 / 6378.1] } } } }, { $group: { _id: 0, Population: { $sum: "$population" } } }] ).toArray()[0].Population
 
 
 
