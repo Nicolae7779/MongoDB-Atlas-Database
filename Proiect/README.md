@@ -225,6 +225,11 @@ Toate documentele care se află pe o rază de la 50km la 200km față de coordon
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere%20%203.png)
 
+toArray() - transformă rezultatul într-un array de document
+
+toArray()[0] - accesează primul element din array(de exemplu: $sum: "$population" afișează un singur rezultat)
+
+toArray()[0].Population - accesează valoarea câmpului "Population", "Population" - este suma populației calculată anterior
 
 Populația totală din documentele care se află în apropierea coordonatelor [-74.044502, 40.489247], cu o rază de 50 km
 
