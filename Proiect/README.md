@@ -221,14 +221,24 @@ $geoWithin - este folosit pentru a verificadacă o formă geomretrică (de exemp
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere%20%202.png)
 
 
-Populația totală care se află de la 50km la 200km față de coordonatele [-74.044502, 40.489247]
+Toate documentele care se află pe o rază de la 50km la 200km față de coordonatele [-74.044502, 40.489247]
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoWithin%2C%20centerSphere%20%203.png)
 
 
+Populația totală din documentele care se află în apropierea coordonatelor [-74.044502, 40.489247], cu o rază de 50 km
+
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/Total%20population%20situated%20within%20a%20radius%20of%2050%20km.png)
 
 
+Populația totală din documentele care se află în apropierea coordonatelor [-74.044502, 40.489247], cu o rază de 200 km
 
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/Total%20population%20situated%20within%20a%20radius%20of%20200%20km.png)
+
+
+Populația totală din documentele situate în apropierea coordonatelor [-74.044502, 40.489247], într-o rază cuprinsă între 50 și 200 km
+
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/Total%20population%20situated%20between%2050km%20and%20200km.png)
 
 
 
