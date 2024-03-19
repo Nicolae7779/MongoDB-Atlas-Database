@@ -246,8 +246,11 @@ Populația totală din documentele situate în apropierea coordonatelor [-74.044
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/Total%20population%20situated%20between%2050km%20and%20200km.png)
 
 
+Populația totală din documentele situate în apropierea coordonatelor [-74.044502, 40.489247], într-o rază cuprinsă între 50 și 200 km 
 
+toArray()[0].Population - accesează valoarea câmpului "Population", "Population" - este suma populației calculată anterior
 
+![imagine]()
 
 
 
