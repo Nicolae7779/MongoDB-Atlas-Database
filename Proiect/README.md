@@ -250,7 +250,7 @@ Populația totală din documentele situate în apropierea coordonatelor [-74.044
 
 toArray()[0].Population - accesează valoarea câmpului "Population", "Population" - este suma populației calculată anterior
 
-![imagine]()
+![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/f/geoNear.png)
 
 
 
