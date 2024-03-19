@@ -82,7 +82,7 @@ db.Coordinates.updateMany({}, [ { $set: { location: { type: "Point", coordinates
   Method 1
 
 db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [[-87.635918, 41.878876], 2.5 / 6378.1] } } }).count()
-db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [[-87.635918, 41.878876], 2.5 / 6378.1] } } });
+db.Coordinates.find({ location: { $geoWithin: { $centerSphere: [[-87.635918, 41.878876], 2.5 / 6378.1] } } })
 
 
   Method 2
@@ -117,9 +117,9 @@ db.Coordinates.aggregate([ { $match: { location: { $geoWithin: { $centerSphere: 
 
 
 
+db.Coordinates.aggregate([{$geoNear: { near: { type: "Point", coordinates : [-74.044502, 40.689247] }, distanceField: "distance", minDistance: 50000, maxDistance: 200000}}, { $group: { _id: 0, Population: {$sum: "$population"}}}]).toArray()[0].Population
 
-
-
+toArray()[0].Population - ca să afișeze doar Populația, fără _id: 0 și fără [ { } ]
 
 
 
