@@ -181,7 +181,7 @@ $centerSphere - este folosit pentru a efectua căutarea geospațială în jurul 
 
 Coordonatele [-87.635918, 41.878876] - reprezintă longitudinea și latitudinea centrului cercului
 
-2.5 / 6378.1 - reprezintă raza cercului în kilometri, exprimată în raport cu raza Pământului
+2.5 / 6378.1 - reprezintă raza cercului în kilometri, exprimată în raport cu raza ecuatorială a Pământului
 
 ![imagine](https://github.com/Nicolae7779/MongoDB-Atlas-Database/blob/main/Proiect/imagini/e/geoWithin.png)
 
