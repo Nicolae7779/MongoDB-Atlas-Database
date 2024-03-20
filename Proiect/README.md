@@ -208,7 +208,7 @@ maxDistance fiind 10000, limit(10), afișează doar primele 10 documente
 
 ## f) Get the total population situated between 50 and 200 kms around New York's landmark, the Statue of Liberty at coordinates 40.689247, -74.044502.
 
-$geoWithin - este folosit pentru a verificadacă o formă geomretrică (de exemplu: cerc) se află în interiorul unei altei forme geospațiale
+$geoWithin - este folosit pentru a verifica dacă o formă geomretrică (de exemplu: cerc) se află în interiorul unei altei forme geospațiale
 
 200 / 6378.1 - sunt afișate toate documentele pe o rază de 200 km, coordonatele [-74.044502, 40.489247] fiind centrul cercului
 
